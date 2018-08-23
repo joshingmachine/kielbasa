@@ -1,0 +1,21 @@
+{
+  "name": "kielbasa",
+  "version": "0.1.0",
+  "description": "Utilities to change string character casing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/joshingmachine/kielbasa"
+  },
+  "keywords": [
+    "uppercase",
+    "lowercase",
+    "camelcase",
+    "pascalcase"
+  ],
+  "author": "Josh Smith",
+  "license": "MIT"
+}
