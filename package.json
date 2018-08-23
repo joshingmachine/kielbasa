@@ -2,7 +2,7 @@
   "name": "kielbasa",
   "version": "0.1.0",
   "description": "Utilities to change string character casing",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
