@@ -1,5 +1,5 @@
-const { getDashCase } = require('./utils.js')
-const getLowerCase = require('./getLowerCase.js')
+import { getDashCase } from './utils.js'
+import getLowerCase from './getLowerCase.js'
 
 const HYPHEN = '-'
 
@@ -7,4 +7,4 @@ function getKebabCase(string, options = {}) {
     return getDashCase(string, getLowerCase, HYPHEN, options)
 }
 
-module.exports = getKebabCase
+export default getKebabCase

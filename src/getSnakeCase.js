@@ -1,5 +1,5 @@
-const { getDashCase } = require('./utils.js')
-const getLowerCase = require('./getLowerCase.js')
+import { getDashCase } from './utils.js'
+import getLowerCase from './getLowerCase.js'
 
 const UNDERSCORE = '_'
 
@@ -7,4 +7,4 @@ function getSnakeCase(string, options = {}) {
     return getDashCase(string, getLowerCase, UNDERSCORE, options)
 }
 
-module.exports = getSnakeCase
+export default getSnakeCase

@@ -1,5 +1,5 @@
-const { getDashCase } = require('./utils.js')
-const getUpperCase = require('./getUpperCase.js')
+import { getDashCase } from './utils.js'
+import getUpperCase from './getUpperCase.js'
 
 const DASH = '-'
 
@@ -7,4 +7,4 @@ function getTrainCase(string, options = {}) {
     return getDashCase(string, getUpperCase, DASH, options)
 }
 
-module.exports = getTrainCase
+export default getTrainCase

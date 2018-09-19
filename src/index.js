@@ -1,13 +1,13 @@
-const getCamelCase = require('./getCamelCase.js')
-const getKebabCase = require('./getKebabCase.js')
-const getLowerCase = require('./getLowerCase.js')
-const getScreamingSnakeCase = require('./getScreamingSnakeCase.js')
-const getSnakeCase = require('./getSnakeCase.js')
-const getStartCase = require('./getStartCase.js')
-const getTrainCase = require('./getTrainCase.js')
-const getUpperCase = require('./getUpperCase.js')
+import getCamelCase from './getCamelCase.js'
+import getKebabCase from './getKebabCase.js'
+import getLowerCase from './getLowerCase.js'
+import getScreamingSnakeCase from './getScreamingSnakeCase.js'
+import getSnakeCase from './getSnakeCase.js'
+import getStartCase from './getStartCase.js'
+import getTrainCase from './getTrainCase.js'
+import getUpperCase from './getUpperCase.js'
 
-module.exports = {
+export default {
     getCamelCase,
     getKebabCase,
     getLowerCase,

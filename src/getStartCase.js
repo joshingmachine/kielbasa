@@ -1,4 +1,4 @@
-const { getCapitalizedWord, getDelimiter } = require('./utils.js')
+import { getCapitalizedWord, getDelimiter } from './utils.js'
 
 const ALPHABETIC_REGEXP = /([a-zA-Z])/gi
 
@@ -29,4 +29,4 @@ function getStartCase(string, options = {}) {
     return capitalizedSections.join(' ')
 }
 
-module.exports = getStartCase
+export default getStartCase

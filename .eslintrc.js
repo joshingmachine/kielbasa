@@ -1,3 +1,6 @@
 module.exports = {
-    'extends': 'joshingmachine',
+    extends: 'joshingmachine',
+    parserOptions: {
+        sourceType: 'module',
+    },
 }

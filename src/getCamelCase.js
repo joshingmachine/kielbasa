@@ -1,9 +1,9 @@
-const {
+import {
     getCapitalizedWord,
     getDelimiter,
     getStringWithoutPunctuation,
-} = require('./utils.js')
-const getLowerCase = require('./getLowerCase.js')
+} from './utils.js'
+import getLowerCase from './getLowerCase.js'
 
 function getCamelCase(string, options = {}) {
     const modifiedString = getLowerCase(string)
@@ -14,4 +14,4 @@ function getCamelCase(string, options = {}) {
     return stringArray.reduce((acc, word) => acc + getCapitalizedWord(word))
 }
 
-module.exports = getCamelCase
+export default getCamelCase
