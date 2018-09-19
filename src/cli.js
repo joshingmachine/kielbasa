@@ -1,6 +1,4 @@
-#! /usr/bin/env node
 /* eslint-disable no-console */
-
 import fs from 'fs'
 import getCamelCase from './getCamelCase.js'
 import getKebabCase from './getKebabCase.js'
