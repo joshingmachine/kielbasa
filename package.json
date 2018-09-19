@@ -1,7 +1,7 @@
 {
   "name": "kielbasa",
   "version": "0.2.0",
-  "description": "Utilities to change string character casing",
+  "description": "All-Natural Casing Utilities in JavaScript",
   "main": "dist/kielbasa.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
