@@ -1,13 +1,16 @@
+#!/usr/bin/env node
 /* eslint-disable no-console */
+import {
+    getCamelCase,
+    getKebabCase,
+    getLowerCase,
+    getScreamingSnakeCase,
+    getSnakeCase,
+    getStartCase,
+    getTrainCase,
+    getUpperCase,
+} from './kielbasa.js'
 import fs from 'fs'
-import getCamelCase from './getCamelCase.js'
-import getKebabCase from './getKebabCase.js'
-import getLowerCase from './getLowerCase.js'
-import getScreamingSnakeCase from './getScreamingSnakeCase.js'
-import getSnakeCase from './getSnakeCase.js'
-import getStartCase from './getStartCase.js'
-import getTrainCase from './getTrainCase.js'
-import getUpperCase from './getUpperCase.js'
 import path from 'path'
 import program from 'commander'
 
@@ -28,6 +31,7 @@ function getVersion() {
 }
 
 program
+    .name('kielbasa')
     .version(getVersion(), '-v, --version')
     .option(
         '-l, --language [string]',

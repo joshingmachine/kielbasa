@@ -31,4 +31,5 @@ module.exports = {
             raw: true,
         }),
     ],
+    target: 'node',
 }

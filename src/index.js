@@ -7,6 +7,17 @@ import getStartCase from './getStartCase.js'
 import getTrainCase from './getTrainCase.js'
 import getUpperCase from './getUpperCase.js'
 
+export {
+    getCamelCase,
+    getKebabCase,
+    getLowerCase,
+    getScreamingSnakeCase,
+    getSnakeCase,
+    getStartCase,
+    getTrainCase,
+    getUpperCase,
+}
+
 export default {
     getCamelCase,
     getKebabCase,

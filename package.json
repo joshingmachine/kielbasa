@@ -4,9 +4,13 @@
   "description": "All-Natural Casing Utilities in JavaScript",
   "main": "dist/kielbasa.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "npm run build:prod",
+    "build:dev": "npm run build:dev:bundle && npm run build:dev:cli",
+    "build:dev:cli": "babel src/cli.js -o dist/cli.js",
+    "build:dev:bundle": "webpack --config webpack.dev.js",
+    "build:prod": "webpack --config webpack.prod.js",
     "precommit": "lint-staged",
-    "start": "webpack --config webpack.dev.js",
+    "start": "npm run build:dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
@@ -31,6 +35,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.2",
