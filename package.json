@@ -13,9 +13,7 @@
     "start": "npm run build:dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": {
-    "kielbasa": "dist/cli.js"
-  },
+  "bin": "dist/cli.js",
   "repository": {
     "type": "git",
     "url": "https://www.github.com/joshingmachine/kielbasa"
@@ -25,6 +23,9 @@
     "lowercase",
     "camelcase",
     "pascalcase"
+  ],
+  "files": [
+    "/dist"
   ],
   "author": "Josh Smith",
   "license": "MIT",
