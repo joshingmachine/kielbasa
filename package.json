@@ -4,16 +4,15 @@
   "description": "All-Natural Casing Utilities in JavaScript",
   "main": "dist/kielbasa.js",
   "scripts": {
-    "build": "npm run build:prod",
-    "build:dev": "npm run build:dev:bundle && npm run build:dev:cli",
-    "build:dev:cli": "babel src/cli.js -o dist/cli.js",
-    "build:dev:bundle": "webpack --config webpack.dev.js",
-    "build:prod": "webpack --config webpack.prod.js",
+    "build": "npm run build:bundle && npm run build:cli",
+    "build:cli": "babel src/cli.js -o dist/cli.js",
+    "build:bundle": "webpack --config webpack.config.js",
     "precommit": "lint-staged",
     "start": "npm run build:dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": "dist/cli.js",
+  "unpkg": "dist/kielbasa.min.js",
   "repository": {
     "type": "git",
     "url": "https://www.github.com/joshingmachine/kielbasa"
