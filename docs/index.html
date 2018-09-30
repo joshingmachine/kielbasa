@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>kielbasa</title>
+        <script src="https://unpkg.com/kielbasa"></script>
     </head>
     <body>
         <h1>kielbasa</h1>
-        <span>Coming soon</span>
+        <noscript><span>All-Natural Casing Utilities in JavaScript</span></noscript>
+        <input id="kielbasa-input" type="text" value="All-Natural Casing Utilities in JavaScript"></input>
+        <ul>
+            <li><span>kebab-case: </span><span id="kebab-output">allnatural-casing-utilities-in-javascript</span></li>
+            <li><span>snake_case: </span><span id="snake-output">allnatural_casing_utilities_in_javascript</span></li>
+            <li><span>SCREAMING_SNAKE_CASE: </span><span id="screaming-snake-output">ALLNATURAL_CASING_UTILITIES_IN_JAVASCRIPT</span></li>
+        </ul>
+        <script>
+            const cases = [{
+                id: 'kebab-output',
+                func: kielbasa.getKebabCase,
+            }, {
+                id: 'snake-output',
+                func: kielbasa.getSnakeCase,
+            }, {
+                id: 'screaming-snake-output',
+                func: kielbasa.getScreamingSnakeCase,
+            }]
+
+            const updateCase = (caseId, caseFunc, value) => {
+                const outputElement = document.getElementById(caseId)
+                outputElement.innerText = caseFunc(value)
+            }
+
+            const updateCases = value => {
+                cases.forEach(kCase => {
+                    updateCase(kCase.id, kCase.func, value)
+                })
+            }
+
+            document.getElementById('kielbasa-input').addEventListener('input', e => updateCases(e.target.value))
+        </script>
     </body>
 </html>
+
