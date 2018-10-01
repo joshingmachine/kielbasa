@@ -2,28 +2,74 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>kielbasa</title>
+        <title>Kielbasa — All-Natural Casing Utilities in JavaScript</title>
         <script src="https://unpkg.com/kielbasa"></script>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            html {
+                height: 100vh;
+                width: 100vw;
+            }
+
+            html, input {
+                background-color: black;
+                color: white;
+            }
+
+            input {
+                width: 100%;
+            }
+        </style>
     </head>
     <body>
-        <h1>kielbasa</h1>
-        <noscript><span>All-Natural Casing Utilities in JavaScript</span></noscript>
-        <input id="kielbasa-input" type="text" value="All-Natural Casing Utilities in JavaScript"></input>
-        <ul>
-            <li><span>kebab-case: </span><span id="kebab-output">allnatural-casing-utilities-in-javascript</span></li>
-            <li><span>snake_case: </span><span id="snake-output">allnatural_casing_utilities_in_javascript</span></li>
-            <li><span>SCREAMING_SNAKE_CASE: </span><span id="screaming-snake-output">ALLNATURAL_CASING_UTILITIES_IN_JAVASCRIPT</span></li>
-        </ul>
+        <h1>Kielbasa</h1>
+        <div id="description">
+            <noscript>
+                <span>All-Natural Casing Utilities in JavaScript</span>
+            </noscript>
+        </div>
         <script>
+            document.getElementById('description').innerHTML = `
+            <input id="kielbasa-input" type="text" value="All-Natural Casing Utilities in JavaScript"></input>
+            <ul>
+                <li><span>camelCase: </span><span id="camel-output">allnaturalCasingUtilitiesInJavascript</span></li>
+                <li><span>kebab-case: </span><span id="kebab-output">allnatural-casing-utilities-in-javascript</span></li>
+                <li><span>lower case: </span><span id="lower-output">all-natural casing utilities in javascript</span></li>
+                <li><span>PascalCase: </span><span id="pascal-output">AllnaturalCasingUtilitiesInJavascript</span></li>
+                <li><span>SCREAMING_SNAKE_CASE: </span><span id="screaming-snake-output">ALLNATURAL_CASING_UTILITIES_IN_JAVASCRIPT</span></li>
+                <li><span>snake_case: </span><span id="snake-output">allnatural_casing_utilities_in_javascript</span></li>
+                <li><span>Start Case: </span><span id="start-output">All-natural Casing Utilities In Javascript</span></li>
+                <li><span>UPPER CASE: </span><span id="upper-output">ALL-NATURAL CASING UTILITIES IN JAVASCRIPT</span></li>
+            </ul>`
             const cases = [{
+                id: 'camel-output',
+                func: kielbasa.getCamelCase,
+            }, {
                 id: 'kebab-output',
                 func: kielbasa.getKebabCase,
+            }, {
+                id: 'lower-output',
+                func: kielbasa.getLowerCase,
+            }, {
+                id: 'pascal-output',
+                func: kielbasa.getPascalCase,
             }, {
                 id: 'snake-output',
                 func: kielbasa.getSnakeCase,
             }, {
                 id: 'screaming-snake-output',
                 func: kielbasa.getScreamingSnakeCase,
+            }, {
+                id: 'start-output',
+                func: kielbasa.getStartCase,
+            }, {
+                id: 'upper-output',
+                func: kielbasa.getUpperCase,
             }]
 
             const updateCase = (caseId, caseFunc, value) => {
