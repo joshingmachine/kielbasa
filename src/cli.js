@@ -4,6 +4,7 @@ import {
     getCamelCase,
     getKebabCase,
     getLowerCase,
+    getPascalCase,
     getScreamingSnakeCase,
     getSnakeCase,
     getStartCase,
@@ -61,6 +62,14 @@ program
     .description('convert a string to lower case')
     .action(string => {
         handleAction(string, getLowerCase)
+    })
+
+program
+    .command('pascal-case [string]')
+    .alias('pas')
+    .description('convert a string to pascal case')
+    .action(string => {
+        handleAction(string, getPascalCase)
     })
 
 program
