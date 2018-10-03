@@ -18,10 +18,17 @@
     "url": "https://www.github.com/joshingmachine/kielbasa"
   },
   "keywords": [
-    "uppercase",
-    "lowercase",
-    "camelcase",
-    "pascalcase"
+    "camel",
+    "case",
+    "convention",
+    "kebab",
+    "lower",
+    "naming",
+    "notation",
+    "pascal",
+    "snake",
+    "start",
+    "upper"
   ],
   "files": [
     "/dist"
