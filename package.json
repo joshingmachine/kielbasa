@@ -17,6 +17,8 @@
     "type": "git",
     "url": "https://www.github.com/joshingmachine/kielbasa"
   },
+  "homepage": "https://joshingmachine.github.io/kielbasa",
+  "bugs": "https://github.com/joshingmachine/kielbasa/issues",
   "keywords": [
     "camel",
     "case",
