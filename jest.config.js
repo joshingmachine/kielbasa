@@ -18,13 +18,13 @@ module.exports = {
     clearMocks: true,
 
     // Indicates whether the coverage information should be collected while executing the test
-    collectCoverage: true,
+    collectCoverage: false,
 
     // An array of glob patterns indicating a set of files for which coverage information should be collected
-    collectCoverageFrom: ['/src/'],
+    collectCoverageFrom: ['<rootDir>/src/**/*.js'],
 
     // The directory where Jest should output its coverage files
-    coverageDirectory: 'coverage',
+    coverageDirectory: '<rootDir>/coverage',
 
     // An array of regexp pattern strings used to skip coverage collection
     coveragePathIgnorePatterns: ['/node_modules/'],
@@ -102,7 +102,7 @@ module.exports = {
     // restoreMocks: false,
 
     // The root directory that Jest should scan for tests and modules within
-    // rootDir: null,
+    rootDir: '.',
 
     // A list of paths to directories that Jest should use to search for files in
     // roots: [
@@ -131,7 +131,7 @@ module.exports = {
     // testLocationInResults: false,
 
     // The glob patterns Jest uses to detect test files
-    testMatch: ['/tests/'],
+    testMatch: ['<rootDir>/tests/**/*.js'],
 
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
     // testPathIgnorePatterns: [
@@ -154,7 +154,9 @@ module.exports = {
     // timers: "real",
 
     // A map from regular expressions to paths to transformers
-    // transform: null,
+    transform: {
+        '^.+\\.js$': 'babel-jest',
+    },
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [

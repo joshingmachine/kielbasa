@@ -1,7 +1,5 @@
 module.exports = {
-    plugins: [
-
-    ],
+    plugins: [],
     presets: [
         [
             '@babel/preset-env',
@@ -9,8 +7,7 @@ module.exports = {
                 targets: {
                     node: true,
                 },
-            }
+            },
         ],
     ],
 }
-
