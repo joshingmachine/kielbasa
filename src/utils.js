@@ -26,7 +26,7 @@ export function getDashCase(
     const delimiter = options.delimiter || getDelimiter(noPunctuationString)
 
     if (delimiter !== caseDelimiter) {
-        const delimiterRegExp = new RegExp(delimiter, 'gi')
+        const delimiterRegExp = new RegExp(`${delimiter}+`, 'gi')
         return noPunctuationString.replace(delimiterRegExp, caseDelimiter)
     }
 
