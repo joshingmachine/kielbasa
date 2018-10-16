@@ -1,5 +1,16 @@
 import getUpperCase from '../src/getUpperCase.js'
 
-test('returns expected upper case string (A)', () => {
-    expect(getUpperCase('Hello, world!')).toBe('HELLO, WORLD!')
+const strings = [
+    ['Hello, world!', 'HELLO, WORLD!'],
+    ["Mr. Popper's Penguins", "MR. POPPER'S PENGUINS"],
+    [
+        'Star Wars: Episode V – The Empire Strikes Back',
+        'STAR WARS: EPISODE V – THE EMPIRE STRIKES BACK',
+    ],
+]
+
+strings.forEach(string => {
+    test(`returns expected upper case string for "${string[0]}"`, () => {
+        expect(getUpperCase(string[0])).toBe(string[1])
+    })
 })

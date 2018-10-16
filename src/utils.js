@@ -1,4 +1,4 @@
-const PUNCTUATION_REGEXP = /([^a-zA-Z\d\s:])/gi
+const PUNCTUATION_REGEXP = /([^a-zA-Z\d\s])/gi
 
 export function getCapitalizedWord(word) {
     /* eslint-disable no-magic-numbers */
