@@ -1,7 +1,7 @@
 {
   "name": "kielbasa",
   "version": "0.5.1",
-  "description": "All-Natural Casing Utilities in JavaScript",
+  "description": "All-Natural Casing Utilities",
   "main": "dist/kielbasa.js",
   "scripts": {
     "build": "npm run build:bundle && npm run build:cli",
