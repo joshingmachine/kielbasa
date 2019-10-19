@@ -10,7 +10,7 @@ import {
     getStartCase,
     getTrainCase,
     getUpperCase,
-} from './kielbasa.js'
+} from './kielbasa.ts'
 import fs from 'fs'
 import path from 'path'
 import program from 'commander'
