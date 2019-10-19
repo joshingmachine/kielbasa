@@ -1,3 +1,3 @@
-typescript/coverage/
-typescript/dist/
-typescript/node_modules/
+src/typescript/coverage/
+src/typescript/dist/
+src/typescript/node_modules/
