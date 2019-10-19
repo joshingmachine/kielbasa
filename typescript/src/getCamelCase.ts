@@ -5,7 +5,11 @@ import {
 } from './utils.js'
 import getLowerCase from './getLowerCase.js'
 
-function getCamelCase(string, options = {}) {
+type Options = {
+    delimiter?: string
+}
+
+function getCamelCase(string: string, options: Options = {}) {
     const modifiedString = getLowerCase(string)
     const delimiter = options.delimiter || getDelimiter(modifiedString)
     const noPunctuationString = getStringWithoutPunctuation(modifiedString)

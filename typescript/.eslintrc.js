@@ -1,5 +1,9 @@
 module.exports = {
-    extends: 'joshingmachine',
+    parser:  '@typescript-eslint/parser',
+    extends: [
+        'joshingmachine',
+        'plugin:@typescript-eslint/recommended',
+    ],
     overrides: [{
         files: 'tests/*.js',
         env: {

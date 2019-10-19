@@ -3,7 +3,7 @@ import getUpperCase from './getUpperCase.js'
 
 const DASH = '-'
 
-function getTrainCase(string, options = {}) {
+function getTrainCase(string: string, options = {}) {
     return getDashCase(string, getUpperCase, DASH, options)
 }
 

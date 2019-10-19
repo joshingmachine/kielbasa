@@ -3,7 +3,7 @@ import getLowerCase from './getLowerCase.js'
 
 const UNDERSCORE = '_'
 
-function getSnakeCase(string, options = {}) {
+function getSnakeCase(string: string, options = {}) {
     return getDashCase(string, getLowerCase, UNDERSCORE, options)
 }
 

@@ -1,4 +1,4 @@
-function getLowerCase(string) {
+function getLowerCase(string: string) {
     return string.toLowerCase()
 }
 

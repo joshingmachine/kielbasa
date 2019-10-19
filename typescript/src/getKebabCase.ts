@@ -3,7 +3,7 @@ import getLowerCase from './getLowerCase.js'
 
 const HYPHEN = '-'
 
-function getKebabCase(string, options = {}) {
+function getKebabCase(string: string, options = {}) {
     return getDashCase(string, getLowerCase, HYPHEN, options)
 }
 
