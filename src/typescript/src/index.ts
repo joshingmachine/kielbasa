@@ -1,12 +1,12 @@
-import getCamelCase from './getCamelCase.js'
-import getKebabCase from './getKebabCase.js'
-import getLowerCase from './getLowerCase.js'
-import getPascalCase from './getPascalCase.js'
-import getScreamingSnakeCase from './getScreamingSnakeCase.js'
-import getSnakeCase from './getSnakeCase.js'
-import getStartCase from './getStartCase.js'
-import getTrainCase from './getTrainCase.js'
-import getUpperCase from './getUpperCase.js'
+import getCamelCase from './getCamelCase'
+import getKebabCase from './getKebabCase'
+import getLowerCase from './getLowerCase'
+import getPascalCase from './getPascalCase'
+import getScreamingSnakeCase from './getScreamingSnakeCase'
+import getSnakeCase from './getSnakeCase'
+import getStartCase from './getStartCase'
+import getTrainCase from './getTrainCase'
+import getUpperCase from './getUpperCase'
 
 export {
     getCamelCase,

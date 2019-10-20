@@ -1,9 +1,9 @@
-import { getDashCase } from './utils.js'
-import getLowerCase from './getLowerCase.js'
+import { getDashCase } from './utils'
+import getLowerCase from './getLowerCase'
 
 const UNDERSCORE = '_'
 
-function getSnakeCase(string: string, options = {}) {
+function getSnakeCase(string: string, options = {}): string {
     return getDashCase(string, getLowerCase, UNDERSCORE, options)
 }
 

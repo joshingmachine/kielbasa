@@ -1,9 +1,9 @@
-import { getDashCase } from './utils.js'
-import getLowerCase from './getLowerCase.js'
+import { getDashCase } from './utils'
+import getLowerCase from './getLowerCase'
 
 const HYPHEN = '-'
 
-function getKebabCase(string: string, options = {}) {
+function getKebabCase(string: string, options = {}): string {
     return getDashCase(string, getLowerCase, HYPHEN, options)
 }
 

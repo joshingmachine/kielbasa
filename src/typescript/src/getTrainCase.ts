@@ -1,9 +1,9 @@
-import { getDashCase } from './utils.js'
-import getUpperCase from './getUpperCase.js'
+import { getDashCase } from './utils'
+import getUpperCase from './getUpperCase'
 
 const DASH = '-'
 
-function getTrainCase(string: string, options = {}) {
+function getTrainCase(string: string, options = {}): string {
     return getDashCase(string, getUpperCase, DASH, options)
 }
 

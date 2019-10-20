@@ -5,7 +5,7 @@
   "main": "dist/kielbasa.js",
   "scripts": {
     "build": "npm run build:bundle && npm run build:cli",
-    "build:cli": "babel src/cli.js -o dist/cli.js",
+    "build:cli": "babel src/cli.ts -o dist/cli.js",
     "build:bundle": "webpack --config webpack.config.js",
     "check-types": "tsc",
     "precommit": "lint-staged",
@@ -39,7 +39,7 @@
   "author": "Josh Smith",
   "license": "MIT",
   "lint-staged": {
-    "**/*.js": [
+    "**/*.ts": [
       "eslint --fix",
       "git add"
     ]
@@ -57,7 +57,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^25.0.0",
     "babel-loader": "^8.0.2",
-    "eslint": "^4.18.2",
+    "eslint": "^6.0.0",
     "eslint-config-joshingmachine": "^0.6.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",

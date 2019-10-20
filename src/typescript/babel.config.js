@@ -4,8 +4,8 @@ module.exports = {
         '@babel/proposal-object-rest-spread',
     ],
     presets: [
+        '@babel/preset-typescript',
         [
-            '@babel/preset-typescript',
             '@babel/preset-env',
             {
                 targets: {
