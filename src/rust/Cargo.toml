@@ -1,0 +1,11 @@
+[package]
+name = "kielbasa"
+version = "0.1.0"
+authors = ["joshingmachine <josh@joshingmachine.com>"]
+edition = "2018"
+license = "MIT"
+description = "All-Natural Casing Utilities"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
