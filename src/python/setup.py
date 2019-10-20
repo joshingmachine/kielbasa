@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="kielbasa",
-    version="0.0.1",
+    version="0.0.2",
     author="Josh Smith",
     author_email="josh@joshingmachine.com",
     description="All-Natural Casing Utilities",
