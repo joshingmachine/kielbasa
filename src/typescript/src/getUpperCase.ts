@@ -1,4 +1,4 @@
-function getUpperCase(string) {
+function getUpperCase(string: string) {
     return string.toUpperCase()
 }
 

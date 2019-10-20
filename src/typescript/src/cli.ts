@@ -17,7 +17,7 @@ import program from 'commander'
 
 let stdin = ''
 
-function handleAction(string = '', performAction) {
+function handleAction(string = '', performAction: (x: string) => string) {
     const input = stdin || string
     console.log(performAction(input))
 }
@@ -117,8 +117,11 @@ if (process.stdin.isTTY) {
 } else {
     process.stdin.on('readable', function addChunkToStdin() {
         // Necessary for proper chunk reading
-        // eslint-disable-next-line no-invalid-this
+        /* eslint-disable no-invalid-this */
+        // @ts-ignore
         const chunk = this.read()
+        /* eslint-enable no-invalid-this */
+
         if (chunk !== null) {
             stdin += chunk
         }

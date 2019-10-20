@@ -1,12 +1,13 @@
 {
   "name": "kielbasa",
   "version": "0.5.1",
-  "description": "All-Natural Casing Utilities in JavaScript",
+  "description": "All-Natural Casing Utilities",
   "main": "dist/kielbasa.js",
   "scripts": {
     "build": "npm run build:bundle && npm run build:cli",
-    "build:cli": "babel src/cli.js -o dist/cli.js",
+    "build:cli": "babel src/cli.ts -o dist/cli.js",
     "build:bundle": "webpack --config webpack.config.js",
+    "check-types": "tsc",
     "precommit": "lint-staged",
     "start": "npm run build:dev",
     "test": "jest"
@@ -38,7 +39,7 @@
   "author": "Josh Smith",
   "license": "MIT",
   "lint-staged": {
-    "**/*.js": [
+    "**/*.ts": [
       "eslint --fix",
       "git add"
     ]
@@ -46,11 +47,17 @@
   "devDependencies": {
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
     "@babel/preset-env": "^7.1.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^25.0.0",
     "babel-loader": "^8.0.2",
-    "eslint": "^4.18.2",
+    "eslint": "^6.0.0",
     "eslint-config-joshingmachine": "^0.6.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
@@ -59,6 +66,7 @@
     "lint-staged": "^7.2.2",
     "prettier": "^1.11.1",
     "regenerator-runtime": "^0.12.1",
+    "typescript": "^3.6.4",
     "webpack": "^4.19.0",
     "webpack-cli": "^3.1.0",
     "webpack-merge": "^4.1.4"

@@ -2,13 +2,13 @@ const path = require('path')
 const merge = require('webpack-merge')
 
 const commonConfig = {
-    entry: path.resolve(__dirname, 'src/index.js'),
+    entry: path.resolve(__dirname, 'src/index.ts'),
     mode: 'production',
     module: {
         rules: [
             {
                 exclude: /node_modules/,
-                test: /\.js/,
+                test: /\.ts/,
                 use: {
                     loader: 'babel-loader',
                 },
@@ -20,6 +20,9 @@ const commonConfig = {
         libraryTarget: 'umd',
         path: path.resolve(__dirname, 'dist'),
         umdNamedDefine: true,
+    },
+    resolve: {
+        extensions: ['.ts', '.js'],
     },
     target: 'web',
 }

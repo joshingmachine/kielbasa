@@ -2,10 +2,14 @@ import {
     getCapitalizedWord,
     getDelimiter,
     getStringWithoutPunctuation,
-} from './utils.js'
-import getLowerCase from './getLowerCase.js'
+} from './utils'
+import getLowerCase from './getLowerCase'
 
-function getCamelCase(string, options = {}) {
+type Options = {
+    delimiter?: string
+}
+
+function getCamelCase(string: string, options: Options = {}): string {
     const modifiedString = getLowerCase(string)
     const delimiter = options.delimiter || getDelimiter(modifiedString)
     const noPunctuationString = getStringWithoutPunctuation(modifiedString)
