@@ -5,16 +5,16 @@ build:
 	make build-typescript;
 
 build-python:
-	cd src/python && python3 setup.py sdist bdist_wheel
+	cd python && python3 setup.py sdist bdist_wheel
 
 build-ruby:
-	cd src/ruby && gem build kielbasa.gemspec
+	cd ruby && gem build kielbasa.gemspec
 
 build-rust:
-	cd src/rust && cargo build
+	cd rust && cargo build
 
 build-typescript:
-	cd src/typescript && npm ci && npm run build
+	cd typescript && npm ci && npm run build
 
 clean:
 	make clean-python;
@@ -23,16 +23,16 @@ clean:
 	make clean-typescript;
 
 clean-python:
-	cd src/python && git clean -xdf
+	cd python && git clean -xdf
 
 clean-ruby:
-	cd src/ruby && git clean -xdf
+	cd ruby && git clean -xdf
 
 clean-rust:
-	cd src/rust & git clean -xdf
+	cd rust & git clean -xdf
 
 clean-typescript:
-	cd src/typescript && git clean -xdf
+	cd typescript && git clean -xdf
 
 deploy:
 	make deploy-python;
@@ -41,13 +41,13 @@ deploy:
 	make deploy-typescript;
 
 deploy-python:
-	cd src/python && python3 -m twine upload dist/*
+	cd python && python3 -m twine upload dist/*
 
 deploy-ruby:
-	cd src/ruby && gem push kielbasa-0.0.1.gem
+	cd ruby && gem push kielbasa-0.0.1.gem
 
 deploy-rust:
-	cd src/rust && cargo publish
+	cd rust && cargo publish
 
 deploy-typescript:
 	echo 'TODO'
