@@ -18,19 +18,23 @@ function getSectionWithCapitalizedWord(section: string): string {
         firstAlphabeticCharacterIndex
     )
     const uncapitalizedWord = section.substring(firstAlphabeticCharacterIndex)
+    const capitalizedWord = getCapitalizedWord(uncapitalizedWord)
+    const sectionWithCapitalizedWord = leadingCharacters + capitalizedWord
 
-    return leadingCharacters + getCapitalizedWord(uncapitalizedWord)
+    return sectionWithCapitalizedWord
 }
 
 type Options = {
     delimiter?: string
 }
 
-function getStartCase(string: string, options: Options = {}): string {
-    const delimiter = options.delimiter || getDelimiter(string)
-    const sections = string.split(delimiter)
+function getStartCase(originalString: string, options: Options = {}): string {
+    const delimiter = options.delimiter || getDelimiter(originalString)
+    const sections = originalString.split(delimiter)
     const capitalizedSections = sections.map(getSectionWithCapitalizedWord)
-    return capitalizedSections.join(' ')
+    const startCaseString = capitalizedSections.join(' ')
+
+    return startCaseString
 }
 
 export default getStartCase

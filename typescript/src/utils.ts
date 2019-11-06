@@ -1,12 +1,17 @@
 const PUNCTUATION_REGEXP = /([^a-zA-Z\d\s])/gi
 
+type Options = {
+    delimiter?: string
+}
+
 export function getCapitalizedWord(word: string) {
     /* eslint-disable no-magic-numbers */
     const firstCharacter = word.charAt(0).toUpperCase()
     const trailingCharacters = word.substring(1).toLowerCase()
     /* eslint-enable no-magic-numbers */
+    const capitalizedWord = firstCharacter + trailingCharacters
 
-    return firstCharacter + trailingCharacters
+    return capitalizedWord
 }
 
 export function getDelimiter(noPunctuationString?: string) {
@@ -15,17 +20,13 @@ export function getDelimiter(noPunctuationString?: string) {
     return ' '
 }
 
-type Options = {
-    delimiter?: string
-}
-
 export function getDashCase(
-    string: string,
+    originalString: string,
     getModifiedString: (x: string) => string,
     caseDelimiter: string,
     options: Options = {}
 ) {
-    const modifiedString = getModifiedString(string)
+    const modifiedString = getModifiedString(originalString)
     const noPunctuationString = getStringWithoutPunctuation(modifiedString)
     const delimiter = options.delimiter || getDelimiter(noPunctuationString)
 
@@ -37,6 +38,8 @@ export function getDashCase(
     return noPunctuationString
 }
 
-export function getStringWithoutPunctuation(string: string) {
-    return string.replace(PUNCTUATION_REGEXP, '')
+export function getStringWithoutPunctuation(originalString: string) {
+    const noPunctuationString = originalString.replace(PUNCTUATION_REGEXP, '')
+
+    return noPunctuationString
 }
