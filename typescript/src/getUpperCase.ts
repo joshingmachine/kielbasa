@@ -1,5 +1,6 @@
-function getUpperCase(string: string) {
-    return string.toUpperCase()
+function getUpperCase(originalString: string) {
+    const upperCaseString = originalString.toUpperCase()
+    return upperCaseString
 }
 
 export default getUpperCase

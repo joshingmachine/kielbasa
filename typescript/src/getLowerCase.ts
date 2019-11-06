@@ -1,5 +1,6 @@
-function getLowerCase(string: string) {
-    return string.toLowerCase()
+function getLowerCase(originalString: string) {
+    const lowerCaseString = originalString.toLowerCase()
+    return lowerCaseString
 }
 
 export default getLowerCase
