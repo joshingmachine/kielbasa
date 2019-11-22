@@ -1,7 +1,6 @@
 import { getDelimiter, getDelimiterRegExp, removePunctuation } from './utils'
+import { HYPHEN } from './constants'
 import getUpperCase from './getUpperCase'
-
-const HYPHEN = '-'
 
 type Options = {
     delimiter?: string

@@ -1,7 +1,6 @@
 import { getDelimiter, getDelimiterRegExp, removePunctuation } from './utils'
+import { UNDERSCORE } from './constants'
 import getLowerCase from './getLowerCase'
-
-const UNDERSCORE = '_'
 
 type Options = {
     delimiter?: string
