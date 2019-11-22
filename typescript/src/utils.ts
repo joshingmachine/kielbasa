@@ -1,4 +1,4 @@
-const PUNCTUATION_REGEXP = /([^a-zA-Z\d\s])/gi
+export const PUNCTUATION_REGEXP = /([^a-zA-Z\d\s])/gi
 
 type Options = {
     delimiter?: string
@@ -14,28 +14,22 @@ export function getCapitalizedWord(word: string) {
     return capitalizedWord
 }
 
-export function getDelimiter(noPunctuationString?: string) {
+export function getDelimiter(originalString?: string) {
     // TODO: actually parse string
     // to figure out delimiter
     return ' '
 }
 
-export function getDashCase(
-    originalString: string,
-    getModifiedString: (x: string) => string,
-    caseDelimiter: string,
-    options: Options = {}
-) {
-    const modifiedString = getModifiedString(originalString)
-    const noPunctuationString = getStringWithoutPunctuation(modifiedString)
-    const delimiter = options.delimiter || getDelimiter(noPunctuationString)
+export function getDelimiterRegExp(delimiter: string) {
+    const delimiterRegExp = new RegExp(`${delimiter}+`, 'gi')
 
-    if (delimiter !== caseDelimiter) {
-        const delimiterRegExp = new RegExp(`${delimiter}+`, 'gi')
-        return noPunctuationString.replace(delimiterRegExp, caseDelimiter)
-    }
+    return delimiterRegExp
+}
 
-    return noPunctuationString
+export function removePunctuation(originalString: string) {
+    const punctuationRemovedString = originalString.replace(PUNCTUATION_REGEXP, '')
+
+    return punctuationRemovedString
 }
 
 export function getStringWithoutPunctuation(originalString: string) {
